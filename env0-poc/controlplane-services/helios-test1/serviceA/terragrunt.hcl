@@ -2,8 +2,9 @@ include {
   path = find_in_parent_folders()
 }
 terraform {
-  #source = "git@github.com:manishkumar-ops/env0-poc-tf-modules.git//secretsmanager?ref=v1.0.1"
-  source = "../../../modules/secretsmanager"
+  #source = "git@github.com:cohesity/terraform_modules.git//secretsmanager?ref=v1.0.1"
+  #source = "../../../modules/secretsmanager"
+  source = "git@github.com:cohesity/terraform_modules.git//secretsmanager?ref=v6.0.2"
 }
 inputs = {
   ctrlplane_tf_arn       = "arn:aws:iam::605698800693:role/tf-auto"
